@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COA Notes — Computer Architecture</title>
+    <meta name="description" content="Comprehensive 5-7 mark Q&A notes for Computer Architecture. Covers Pipelining, Memory Hierarchy, ILP, Vector Processing, and Multiprocessor Architecture.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(14, 165, 233, 0.06) 0%, transparent 50%);
+            animation: float 15s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(1deg); }
+            66% { transform: translate(-20px, 20px) rotate(-1deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 0.5rem 1.5rem;
+            border-radius: 999px;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            max-width: 550px;
+            margin: 0 auto 2rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #818cf8;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* MODULE CARDS */
+        .modules {
+            max-width: 900px;
+            margin: -2rem auto 4rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .module-card {
+            display: flex;
+            align-items: stretch;
+            background: #1e293b;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .module-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #475569;
+        }
+
+        .module-accent {
+            width: 6px;
+            flex-shrink: 0;
+        }
+
+        .module-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            flex: 1;
+            gap: 1rem;
+        }
+
+        .module-info {
+            flex: 1;
+        }
+
+        .module-number {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.35rem;
+        }
+
+        .module-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 0.25rem;
+        }
+
+        .module-desc {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .module-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .q-count {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #94a3b8;
+            white-space: nowrap;
+        }
+
+        .arrow {
+            font-size: 1.3rem;
+            color: #475569;
+            transition: all 0.3s;
+        }
+
+        .module-card:hover .arrow {
+            color: #818cf8;
+            transform: translateX(4px);
+        }
+
+        /* COLORS */
+        .c-blue { background: #3b82f6; }
+        .c-purple { background: #8b5cf6; }
+        .c-orange { background: #f97316; }
+        .c-sky { background: #0ea5e9; }
+        .c-green { background: #10b981; }
+
+        .t-blue { color: #60a5fa; }
+        .t-purple { color: #a78bfa; }
+        .t-orange { color: #fb923c; }
+        .t-sky { color: #38bdf8; }
+        .t-green { color: #34d399; }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #1e293b;
+            color: #475569;
+            font-size: 0.8rem;
+        }
+
+        footer a { color: #818cf8; text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .stats { gap: 1.5rem; }
+            .stat-number { font-size: 1.5rem; }
+            .module-body { flex-direction: column; align-items: flex-start; padding: 1.25rem 1.5rem; }
+            .module-meta { width: 100%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="badge">Even Semester · 2026</div>
+        <h1>Computer Organization & Architecture</h1>
+        <p>Comprehensive question & answer notes with fully detailed 5-7 mark level answers. Click any module to start studying.</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Modules</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">129</div>
+                <div class="stat-label">Questions</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5-7</div>
+                <div class="stat-label">Mark Level</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="modules">
+    <a href="COA_Module1_Pipelining.html" class="module-card" id="module-1">
+        <div class="module-accent c-blue"></div>
+        <div class="module-body">
+            <div class="module-info">
+                <div class="module-number t-blue">Module 1</div>
+                <div class="module-title">Performance, Pipelining & Exception Handling</div>
+                <div class="module-desc">CPU performance metrics, 5-stage pipeline, hazards, forwarding, branch prediction, exceptions</div>
+            </div>
+            <div class="module-meta">
+                <span class="q-count">39 Qs</span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="COA_Module2_Memory.html" class="module-card" id="module-2">
+        <div class="module-accent c-purple"></div>
+        <div class="module-body">
+            <div class="module-info">
+                <div class="module-number t-purple">Module 2</div>
+                <div class="module-title">Hierarchical Memory Technology</div>
+                <div class="module-desc">Cache organizations, MESI protocol, coherence, replacement policies, AMAT calculations</div>
+            </div>
+            <div class="module-meta">
+                <span class="q-count">23 Qs</span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="COA_Module3_ILP.html" class="module-card" id="module-3">
+        <div class="module-accent c-orange"></div>
+        <div class="module-body">
+            <div class="module-info">
+                <div class="module-number t-orange">Module 3</div>
+                <div class="module-title">Instruction-Level Parallelism (ILP)</div>
+                <div class="module-desc">Superscalar, VLIW, Tomasulo's algorithm, register renaming, out-of-order execution, ROB</div>
+            </div>
+            <div class="module-meta">
+                <span class="q-count">22 Qs</span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="COA_Module4_Vector.html" class="module-card" id="module-4">
+        <div class="module-accent c-sky"></div>
+        <div class="module-body">
+            <div class="module-info">
+                <div class="module-number t-sky">Module 4</div>
+                <div class="module-title">Array & Vector Pipeline</div>
+                <div class="module-desc">Array processors, vector pipelines, chaining, mask registers, SIMD architectures</div>
+            </div>
+            <div class="module-meta">
+                <span class="q-count">19 Qs</span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="COA_Module5_Multiprocessor.html" class="module-card" id="module-5">
+        <div class="module-accent c-green"></div>
+        <div class="module-body">
+            <div class="module-info">
+                <div class="module-number t-green">Module 5</div>
+                <div class="module-title">Multiprocessor Architecture</div>
+                <div class="module-desc">Flynn's taxonomy, UMA/NUMA, interconnection networks, dataflow, systolic arrays, clusters</div>
+            </div>
+            <div class="module-meta">
+                <span class="q-count">26 Qs</span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </a>
+</section>
+
+<footer>
+    <p>Instructor: Madhurima Halder · Built with ❤️ for exam prep</p>
+</footer>
+
+</body>
+</html>
