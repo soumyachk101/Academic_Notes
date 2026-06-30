@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Study Notes</title>
-    <meta name="description" content="A comprehensive curriculum library containing simple answers, key points, and PYQ solutions for various subjects including Computer Architecture and Chemistry.">
+    <title>Computer Architecture Notes</title>
+    <meta name="description" content="Simple answers and key points for Computer Architecture. Covers Pipelining, Memory Hierarchy, ILP, Vector Processing, and Multiprocessor Architecture.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,10 +45,11 @@
             background-position: 0 0, 12px 12px;
             color: var(--text-main);
             min-height: 100vh;
-            padding: 2rem 1rem;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            padding-bottom: 2rem;
         }
 
         /* FOLIO PAGE WRAPPER (Visual book simulator page) */
@@ -469,11 +470,17 @@
 </head>
 <body>
 
+<nav class="top-nav" style="width: 100%; padding: 1rem 2rem; background: var(--bg-paper); border-bottom: 1px solid rgba(44,62,80,0.1); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; margin-bottom: 2rem;">
+    <a href="index.html" style="text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.9rem;">← Main Library</a>
+    <span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; color: var(--text-main); font-size: 1.2rem;">Computer Architecture</span>
+    <span style="width: 80px;"></span>
+</nav>
+
 <main class="folio-page">
     <!-- TITLE PAGE HEADER -->
     <header class="title-page">
         <div class="book-badge">Academic Solved Notes</div>
-        <h1 class="book-title">Academic Study Notes</h1>
+        <h1 class="book-title">Computer Architecture</h1>
         
         <div class="book-divider">
             <span class="line"></span>
@@ -487,18 +494,18 @@
         
         <div class="book-stats">
             <div class="stat-item">
-                <span class="stat-val">3</span>
-                <span class="stat-lbl">Subjects</span>
+                <span class="stat-val">V</span>
+                <span class="stat-lbl">Chapters</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <span class="stat-val">200+</span>
+                <span class="stat-val">129</span>
                 <span class="stat-lbl">Questions</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <span class="stat-val">Detailed</span>
-                <span class="stat-lbl">Solutions</span>
+                <span class="stat-val">Points</span>
+                <span class="stat-lbl">Format</span>
             </div>
         </div>
     </header>
@@ -506,89 +513,218 @@
     <!-- CHAPTERS GRID -->
     <section class="chapters-grid">
         
-        <!-- COMPUTER ARCHITECTURE FOLDER -->
-        <a href="coa_index.html" class="chapter-card" style="--chapter-color: var(--color-u1);" id="module-coa">
+        <!-- CHAPTER 1 -->
+        <a href="pipelining.html" class="chapter-card" style="--chapter-color: var(--color-u1);" id="module-1">
             <div class="card-content">
                 <div class="chapter-header">
-                    <div class="chapter-num">Subject</div>
-                    <h2 class="chapter-title">Computer Architecture</h2>
-                    <p class="chapter-desc">Comprehensive curriculum library containing simple answers, key points, and PYQ solutions for Computer Architecture.</p>
+                    <div class="chapter-num">Chapter I</div>
+                    <h2 class="chapter-title">Performance &amp; Pipelining</h2>
+                    <p class="chapter-desc">CPU execution metrics, the classical 5-stage pipeline, hazard types, forwarding hardware paths, and branch predictions.</p>
                 </div>
                 
                 <div class="mini-toc">
                     <div class="toc-item">
-                        <span class="toc-lbl">Pipelining & Memory</span>
+                        <span class="toc-lbl">CPU Execution Metrics</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">Ch 1-2</span>
+                        <span class="toc-idx">p. 01</span>
                     </div>
                     <div class="toc-item">
-                        <span class="toc-lbl">ILP & Vector Processing</span>
+                        <span class="toc-lbl">5-Stage Datapath Layout</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">Ch 3-4</span>
+                        <span class="toc-idx">p. 08</span>
                     </div>
                     <div class="toc-item">
-                        <span class="toc-lbl">Multiprocessor Systems</span>
+                        <span class="toc-lbl">Hazards &amp; Forwarding</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">Ch 5</span>
+                        <span class="toc-idx">p. 15</span>
                     </div>
                     <div class="toc-item">
-                        <span class="toc-lbl">PYQs & Important QA</span>
+                        <span class="toc-lbl">Hardware Exceptions</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">Bonus</span>
+                        <span class="toc-idx">p. 29</span>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
-                <span class="badge-count">7 Sections</span>
-                <span class="read-action">Open Folder <span class="arrow">→</span></span>
+                <span class="badge-count">39 Solved Qs</span>
+                <span class="read-action">Open Divider <span class="arrow">→</span></span>
             </div>
         </a>
 
-        <!-- FLAT FOLDER -->
-        <a href="flat_index.html" class="chapter-card" style="--chapter-color: var(--color-u2);" id="module-flat">
+        <!-- CHAPTER 2 -->
+        <a href="memory.html" class="chapter-card" style="--chapter-color: var(--color-u2);" id="module-2">
             <div class="card-content">
                 <div class="chapter-header">
-                    <div class="chapter-num">Subject</div>
-                    <h2 class="chapter-title">Formal Language & Automata</h2>
-                    <p class="chapter-desc">Detailed PYQ solutions and notes for Formal Language and Automata Theory (FLAT).</p>
+                    <div class="chapter-num">Chapter II</div>
+                    <h2 class="chapter-title">Memory Hierarchy Technology</h2>
+                    <p class="chapter-desc">Cache architecture layout, coherence protocols (MESI), replacement logic, write strategies, and memory latency calculations.</p>
                 </div>
                 
                 <div class="mini-toc">
                     <div class="toc-item">
-                        <span class="toc-lbl">2023 Solved Paper (CS)</span>
+                        <span class="toc-lbl">Cache Mapping Schemes</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">100%</span>
+                        <span class="toc-idx">p. 41</span>
                     </div>
                     <div class="toc-item">
-                        <span class="toc-lbl">2023 Solved Paper (CSE)</span>
+                        <span class="toc-lbl">Coherence &amp; MESI Protocol</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">100%</span>
+                        <span class="toc-idx">p. 50</span>
                     </div>
                     <div class="toc-item">
-                        <span class="toc-lbl">2024 Solved Paper (CS)</span>
+                        <span class="toc-lbl">Replacement Strategies</span>
                         <span class="toc-dots"></span>
-                        <span class="toc-idx">100%</span>
+                        <span class="toc-idx">p. 62</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">AMAT Math &amp; Penalties</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 74</span>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
-                <span class="badge-count">3 Papers</span>
-                <span class="read-action">Open Folder <span class="arrow">→</span></span>
+                <span class="badge-count">23 Solved Qs</span>
+                <span class="read-action">Open Divider <span class="arrow">→</span></span>
             </div>
         </a>
 
-        <!-- CHEMISTRY PYQ -->
-        <a href="chem_pyq.html" class="chapter-card" style="--chapter-color: #3b82f6;" id="module-chem-pyq">
+        <!-- CHAPTER 3 -->
+        <a href="ilp.html" class="chapter-card" style="--chapter-color: var(--color-u3);" id="module-3">
+            <div class="card-content">
+                <div class="chapter-header">
+                    <div class="chapter-num">Chapter III</div>
+                    <h2 class="chapter-title">Instruction-Level Parallelism</h2>
+                    <p class="chapter-desc">Superscalar architectures, static VLIW design, dynamic Tomasulo execution, register renaming, and the Reorder Buffer.</p>
+                </div>
+                
+                <div class="mini-toc">
+                    <div class="toc-item">
+                        <span class="toc-lbl">Superscalar &amp; VLIW Design</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 83</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Tomasulo Out-of-Order Execution</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 91</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Register Renaming Paths</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 103</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Reorder Buffer Commits</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 112</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge-count">22 Solved Qs</span>
+                <span class="read-action">Open Divider <span class="arrow">→</span></span>
+            </div>
+        </a>
+
+        <!-- CHAPTER 4 -->
+        <a href="vector.html" class="chapter-card" style="--chapter-color: var(--color-u4);" id="module-4">
+            <div class="card-content">
+                <div class="chapter-header">
+                    <div class="chapter-num">Chapter IV</div>
+                    <h2 class="chapter-title">Array &amp; Vector Processing</h2>
+                    <p class="chapter-desc">Array processing models, vector pipelines, functional unit chaining, mask registers, and SIMD instruction processing.</p>
+                </div>
+                
+                <div class="mini-toc">
+                    <div class="toc-item">
+                        <span class="toc-lbl">SIMD &amp; Array Processors</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 125</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Vector Execution Pipelines</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 132</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Vector Chaining Layouts</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 144</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Vector Mask &amp; Strip-Mining</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 155</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge-count">19 Solved Qs</span>
+                <span class="read-action">Open Divider <span class="arrow">→</span></span>
+            </div>
+        </a>
+
+        <!-- CHAPTER 5 -->
+        <a href="multiprocessor.html" class="chapter-card" style="--chapter-color: var(--color-u5);" id="module-5">
+            <div class="card-content">
+                <div class="chapter-header">
+                    <div class="chapter-num">Chapter V</div>
+                    <h2 class="chapter-title">Multiprocessor Architecture</h2>
+                    <p class="chapter-desc">Flynn's taxonomical catalog, UMA vs. NUMA shared systems, network interconnections, and dataflow/systolic paradigms.</p>
+                </div>
+                
+                <div class="mini-toc">
+                    <div class="toc-item">
+                        <span class="toc-lbl">Flynn's Class Taxonomies</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 167</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Shared Memory (UMA/NUMA)</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 175</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Interconnection Networks</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 188</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Dataflow &amp; Systolic Arrays</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">p. 201</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge-count">26 Solved Qs</span>
+                <span class="read-action">Open Divider <span class="arrow">→</span></span>
+            </div>
+        </a>
+
+        <!-- PYQ -->
+        <a href="pyq.html" class="chapter-card" style="--chapter-color: #eab308;" id="module-pyq">
             <div class="card-content">
                 <div class="chapter-header">
                     <div class="chapter-num">Bonus</div>
-                    <h2 class="chapter-title">Chemistry PYQs</h2>
-                    <p class="chapter-desc">Detailed solutions for Chemistry-1 Previous Year Questions from 2019 to 2025.</p>
+                    <h2 class="chapter-title">Previous Year Questions</h2>
+                    <p class="chapter-desc">Complete marks-wise solutions for 2016, 2017, 2023 and 2024 Computer Architecture question papers.</p>
                 </div>
                 
                 <div class="mini-toc">
                     <div class="toc-item">
-                        <span class="toc-lbl">2025 Solved Paper</span>
+                        <span class="toc-lbl">2016 Solved Paper</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">100%</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">2017 Solved Paper</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">100%</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">2023 Solved Paper</span>
                         <span class="toc-dots"></span>
                         <span class="toc-idx">100%</span>
                     </div>
@@ -597,24 +733,53 @@
                         <span class="toc-dots"></span>
                         <span class="toc-idx">100%</span>
                     </div>
-                    <div class="toc-item">
-                        <span class="toc-lbl">2023 Solved Papers</span>
-                        <span class="toc-dots"></span>
-                        <span class="toc-idx">100%</span>
-                    </div>
-                    <div class="toc-item">
-                        <span class="toc-lbl">2019 Solved Paper</span>
-                        <span class="toc-dots"></span>
-                        <span class="toc-idx">100%</span>
-                    </div>
                 </div>
             </div>
             <div class="card-footer">
-                <span class="badge-count">5 Papers</span>
+                <span class="badge-count">4 Papers</span>
                 <span class="read-action">Open Divider <span class="arrow">→</span></span>
             </div>
         </a>
 
+        </a>
+
+        <!-- IMPORTANT Q&A -->
+        <a href="important_qa.html" class="chapter-card" style="--chapter-color: #ef4444;" id="module-qa">
+            <div class="card-content">
+                <div class="chapter-header">
+                    <div class="chapter-num">Featured</div>
+                    <h2 class="chapter-title">Important Questions</h2>
+                    <p class="chapter-desc">A curated collection of high-yield, important questions with detailed technical answers for exam prep.</p>
+                </div>
+                
+                <div class="mini-toc">
+                    <div class="toc-item">
+                        <span class="toc-lbl">Memory Organization</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">8 Qs</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Vector Processors</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">2 Qs</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">Flynn's Taxonomy</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">2 Qs</span>
+                    </div>
+                    <div class="toc-item">
+                        <span class="toc-lbl">RISC & CISC</span>
+                        <span class="toc-dots"></span>
+                        <span class="toc-idx">1 Qs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="badge-count">13 Solved Qs</span>
+                <span class="read-action">Open Divider <span class="arrow">→</span></span>
+            </div>
+        </a>
 
     </section>
 
