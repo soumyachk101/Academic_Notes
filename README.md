@@ -1,1 +1,1 @@
-# CA
+# Academic Study Notes
