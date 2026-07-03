@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-23 DAA Solved Paper</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="notes.css">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b5cf6; /* Purple Accent for 2023 Paper */
+            --primary-light: rgba(139, 92, 246, 0.05);
+            --border-color: rgba(139, 92, 246, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="daa_index.html">← DAA Menu</a>
+    <span class="nav-title">2022-23 Solved Paper</span>
+    <div style="display:flex;gap:0.5rem;">
+        <a href="daa_pyq_2024.html">← Prev</a>
+        <a href="daa_pyq_2017.html">Next →</a>
+    </div>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Design &amp; Analysis of Algorithms</h1>
+        <p class="subtitle">2022-23 Solved Paper · Detailed Solutions</p>
+        <div class="book-divider">
+            <span class="line"></span>
+            <span class="ornament">❖</span>
+            <span class="line"></span>
+        </div>
+    </header>
+    
+    <div class="section">
+        <h2 id="group-a" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Group A — Very Short Answer Type Questions</h2>
+        
+        <div class="qa-card" id="q23-1-1">
+            <h4 class="qa-question">1. (i) State True/False: Approximation algorithm guarantees the best quality of solution.</h4>
+            <div class="answer">
+                <p>Answer: <b>False</b>. An approximation algorithm guarantees a solution within a bounded ratio (approximation ratio) of the optimal solution, but not necessarily the absolute optimal (best) solution itself.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-2">
+            <h4 class="qa-question">1. (ii) State True/False: O(log n) > O(n).</h4>
+            <div class="answer">
+                <p>Answer: <b>False</b>. The logarithmic complexity \(O(\log n)\) grows strictly slower than linear complexity \(O(n)\), meaning \(O(\log n) < O(n)\) for all large \(n\).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-3">
+            <h4 class="qa-question">1. (iii) What is the time complexity of Knapsack algorithm using Greedy method?</h4>
+            <div class="answer">
+                <p>Answer: <b>\(O(n \log n)\)</b> (for the Fractional Knapsack problem, because sorting the items by profit-to-weight ratio takes \(O(n \log n)\), followed by a linear scan of \(O(n)\)).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-4">
+            <h4 class="qa-question">1. (iv) State True/False: Adjacency matrix and Path Matrix are same.</h4>
+            <div class="answer">
+                <p>Answer: <b>False</b>. An adjacency matrix shows direct single-edge connections between vertices, whereas a path matrix (transitive closure) shows whether a path of any length exists between vertices.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-5">
+            <h4 class="qa-question">1. (v) State True/False: Ordered searching algorithm is a Polynomial Algorithm.</h4>
+            <div class="answer">
+                <p>Answer: <b>True</b>. An ordered search (like Binary Search) runs in \(O(\log n)\) time, which is logarithmic (and therefore polynomial/sub-polynomial) and highly efficient.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-6">
+            <h4 class="qa-question">1. (vi) State True/False: Brute Force method gives the best quality of solution.</h4>
+            <div class="answer">
+                <p>Answer: <b>True</b>. Because brute force evaluates all candidate solutions in the search space, it is guaranteed to find the absolute optimal (best) solution, despite its high time complexity.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-7">
+            <h4 class="qa-question">1. (vii) State True/False: Travelling Salesman Problem is a Non-Polynomial problem.</h4>
+            <div class="answer">
+                <p>Answer: <b>True</b>. The TSP is NP-hard, meaning no polynomial-time algorithm is currently known to solve it.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-8">
+            <h4 class="qa-question">1. (viii) Name one heuristic method of searching.</h4>
+            <div class="answer">
+                <p>Answer: <b>A* Search Algorithm</b> (or Best-First Search, Hill Climbing, Genetic Algorithms).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-9">
+            <h4 class="qa-question">1. (ix) Best case time complexity of Binary search algorithm is:</h4>
+            <div class="answer">
+                <p>Answer: <b>\(O(1)\)</b> (occurs when the middle element of the array is the target on the first comparison).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-10">
+            <h4 class="qa-question">1. (x) The time complexity of Floyd's algorithm is:</h4>
+            <div class="answer">
+                <p>Answer: <b>\(O(V^3)\)</b>.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-11">
+            <h4 class="qa-question">1. (xi) Backtracking follows ______ traversal technique.</h4>
+            <div class="answer">
+                <p>Answer: <b>Depth-First Search (DFS)</b> (using recursive stack frames to explore and backtrack).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-1-12">
+            <h4 class="qa-question">1. (xii) What is spanning tree?</h4>
+            <div class="answer">
+                <p>Answer: A spanning tree is a connected, acyclic subgraph of a connected, undirected graph \(G = (V, E)\) that includes all the vertices \(V\) of the graph with exactly \(|V| - 1\) edges.</p>
+            </div>
+        </div>
+
+        <h2 id="group-b" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Group B — Short Answer Type Questions</h2>
+        
+        <div class="qa-card" id="q23-2">
+            <h4 class="qa-question">2. Write down an algorithm to solve the Job Sequencing with Deadline Problem using Greedy method. What is the time complexity of your algorithm?</h4>
+            <div class="answer">
+                <p><b>Algorithm:</b></p>
+                <pre><code>JobSequencing(Jobs, n):
+    1. Sort all jobs in descending order of profit.
+    2. Find max_deadline among all jobs.
+    3. Create slot array slot[1..max_deadline] initialized to Free.
+    4. For i = 1 to n:
+          For j = min(max_deadline, Jobs[i].deadline) down to 1:
+             If slot[j] is Free:
+                slot[j] = Jobs[i] // Assign job
+                Break
+    5. Return slot</code></pre>
+                <p><b>Complexity Analysis:</b> Sorting takes \(O(n \log n)\). The nested search loops take \(O(n \cdot \min(n, \text{max\_deadline}))\). Thus, the worst-case time complexity is <b>\(O(n^2)\)</b>.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-3">
+            <h4 class="qa-question">3. Find the maximum flow of the following network. Mention each step clearly.</h4>
+            <div class="answer">
+                <p>Given capacity bounds: \(1 \to 4 (27)\), \(1 \to 2 (24)\), \(2 \to 4 (6)\), \(2 \to 3 (10)\), \(2 \to 6 (8)\), \(4 \to 5 (18)\), \(4 \to 3 (15)\), \(5 \to 6 (18)\), \(3 \to 6 (8)\).</p>
+                <p>We trace augmenting paths from source 1 to sink 6:</p>
+                <ol>
+                    <li><b>Path 1: \(1 \to 4 \to 5 \to 6\)</b>
+                        <br>Bottleneck capacity = \(\min(27, 18, 18) = 18\).
+                        <br>Flow along Path 1 = <b>18</b>. Residual capacities: \(1\to4: 9\), \(4\to5: 0\), \(5\to6: 0\).
+                    </li>
+                    <li><b>Path 2: \(1 \to 2 \to 6\)</b>
+                        <br>Bottleneck capacity = \(\min(24, 8) = 8\).
+                        <br>Flow along Path 2 = <b>8</b>. Residual capacities: \(1\to2: 16\), \(2\to6: 0\).
+                    </li>
+                    <li><b>Path 3: \(1 \to 2 \to 3 \to 6\)</b>
+                        <br>Bottleneck capacity = \(\min(16, 10, 8) = 8\).
+                        <br>Flow along Path 3 = <b>8</b>. Residual capacities: \(1\to2: 8\), \(2\to3: 2\), \(3\to6: 0\).
+                    </li>
+                </ol>
+                <p>Since all edges directly entering sink 6 (\(5 \to 6\), \(2 \to 6\), and \(3 \to 6\)) have residual capacity 0, no more augmenting paths exist. The maximum flow is the sum of flows:</p>
+                <div class="formula-box">Maximum Flow: 18 + 8 + 8 = <b>34</b></div>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-4">
+            <h4 class="qa-question">4. Write down an algorithm in Greedy method to find the minimum spanning tree by Prim's algorithm. What is the time complexity of your algorithm?</h4>
+            <div class="answer">
+                <pre><code>Prim-MST(G, w, r):
+    1. For each u in G.V:
+          u.key = Infinity, u.parent = NIL
+    2. r.key = 0
+    3. Initialize Min-Priority Queue Q containing all vertices V.
+    4. While Q is not empty:
+          u = Extract-Min(Q)
+          For each v in G.adj[u]:
+             If v is in Q and w(u, v) < v.key:
+                v.parent = u
+                v.key = w(u, v)
+                Decrease-Key(Q, v, w(u, v))</code></pre>
+                <p><b>Complexity Analysis:</b> With a Binary Heap, extracting minimum takes \(O(V \log V)\) and updating key values takes \(O(E \log V)\), yielding a total time complexity of <b>\(O(E \log V)\)</b>. With a Fibonacci Heap, it runs in \(O(E + V \log V)\).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-5">
+            <h4 class="qa-question">5. (a) State Cook's Theorem. (b) Define Clique with example.</h4>
+            <div class="answer">
+                <p><b>(a) Cook's Theorem:</b> States that the **Boolean Satisfiability Problem (SAT)** is NP-Complete. It was the first problem proven to belong to the NP-Complete class, providing a foundation for proving other problems are NP-Complete via polynomial-time reductions.</p>
+                <p><b>(b) Clique:</b> A clique in an undirected graph \(G=(V, E)\) is a subset of vertices \(V' \subseteq V\) such that every pair of vertices in \(V'\) is connected by a direct edge (creating a complete subgraph).</p>
+                <p><i>Example:</i> In a graph with vertices \(\{A, B, C, D\}\) and edges \(\{(A,B), (B,C), (C,A), (C,D)\}\), the subset \(\{A, B, C\}\) forms a clique of size 3 because edges exist between all three pairs.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-6">
+            <h4 class="qa-question">6. Define the following terms: (i) Brute Force Algorithm, (ii) Approximation Algorithm.</h4>
+            <div class="answer">
+                <p><b>(i) Brute Force Algorithm:</b> A straightforward, exhaustive algorithm design strategy that checks every possible candidate solution in the search space to find the optimal one. It guarantees correctness but is highly inefficient (often taking exponential or factorial time).</p>
+                <p><b>(ii) Approximation Algorithm:</b> An efficient (polynomial-time) algorithm used to find a near-optimal solution for NP-Hard optimization problems. It guarantees that the computed solution's quality is within a provable ratio (approximation ratio) of the true optimal solution.</p>
+            </div>
+        </div>
+
+        <h2 id="group-c" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Group C — Long Answer Type Questions</h2>
+        
+        <div class="qa-card" id="q23-7">
+            <h4 class="qa-question">7. (a) Find the minimum spanning tree using Prim's method from the following graph. Mention each step clearly.</h4>
+            <div class="answer">
+                <p>Edges: \((1,6)[10]\), \((1,2)[28]\), \((6,5)[25]\), \((2,7)[14]\), \((2,3)[16]\), \((7,5)[24]\), \((7,4)[18]\), \((5,4)[22]\), \((3,4)[12]\).</p>
+                <p>Prim's trace starting from node 1:</p>
+                <ol>
+                    <li>Start at vertex 1. Visited = {1}. Available: (1,6)[10], (1,2)[28]. Pick minimum: <b>(1, 6) wt 10</b>. Visited = {1, 6}.</li>
+                    <li>Available: (1,2)[28], (6,5)[25]. Pick minimum: <b>(6, 5) wt 25</b>. Visited = {1, 6, 5}.</li>
+                    <li>Available: (1,2)[28], (5,7)[24], (5,4)[22]. Pick minimum: <b>(5, 4) wt 22</b>. Visited = {1, 6, 5, 4}.</li>
+                    <li>Available: (1,2)[28], (4,3)[12], (4,7)[18], (5,7)[24]. Pick minimum: <b>(4, 3) wt 12</b>. Visited = {1, 6, 5, 4, 3}.</li>
+                    <li>Available: (1,2)[28], (3,2)[16], (4,7)[18]. Pick minimum: <b>(3, 2) wt 16</b>. Visited = {1, 6, 5, 4, 3, 2}.</li>
+                    <li>Available: (2,7)[14], (4,7)[18]. Pick minimum: <b>(2, 7) wt 14</b>. Visited = {1, 6, 5, 4, 3, 2, 7}.</li>
+                </ol>
+                <div class="formula-box">
+                    MST Edges Selected: <b>(1,6)[10], (6,5)[25], (5,4)[22], (4,3)[12], (3,2)[16], (2,7)[14]</b><br>
+                    Total MST Weight: 10 + 25 + 22 + 12 + 16 + 14 = <b>99</b>
+                </div>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Write an algorithm to find all solutions of N-Queens problem using backtracking.</b></p>
+                <pre><code>SolveNQueens(row, N, board):
+    If row == N:
+       Print/Store board state (Solution found)
+       Return
+    For col = 0 to N-1:
+       If IsSafe(row, col, board, N):
+          board[row] = col // Place Queen
+          SolveNQueens(row + 1, N, board) // Recur
+          board[row] = -1 // Backtrack</code></pre>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) What is the time complexity of your algorithm?</b></p>
+                <p>The time complexity is <b>\(O(N!)\)</b>, because there are \(N\) choices for the first row, at most \(N-2\) for the second, and so on.</p>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(d) Write an algorithm to find all pairs shortest path using Floyd's method.</b></p>
+                <pre><code>Floyd-Warshall(W, V):
+    D^(0) = W
+    For k = 1 to V:
+       For i = 1 to V:
+          For j = 1 to V:
+             D^(k)[i][j] = min( D^(k-1)[i][j], D^(k-1)[i][k] + D^(k-1)[k][j] )
+    Return D^(V)</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-8">
+            <h4 class="qa-question">8. (a) Write down an algorithm of Quick Sort. (b) Derive the best, worst and average case time complexity of your algorithm.</h4>
+            <div class="answer">
+                <p><b>(a) Quick Sort Algorithm:</b></p>
+                <pre><code>QuickSort(A, low, high):
+    If low < high:
+       p = Partition(A, low, high)
+       QuickSort(A, low, p - 1)
+       QuickSort(A, p + 1, high)
+
+Partition(A, low, high):
+    pivot = A[high]
+    i = low - 1
+    For j = low to high - 1:
+       If A[j] <= pivot:
+          i = i + 1
+          Swap A[i] with A[j]
+    Swap A[i+1] with A[high]
+    Return i + 1</code></pre>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Derivations:</b></p>
+                <ul>
+                    <li><b>Best Case (\(O(n \log n)\)):</b> Pivot splits array into equal halves. \(T(n) = 2T(n/2) + cn \implies T(n) = \Theta(n \log n)\).</li>
+                    <li><b>Worst Case (\(O(n^2)\)):</b> Array is already sorted and pivot is at end. \(T(n) = T(n-1) + cn \implies T(n) = \Theta(n^2)\).</li>
+                    <li><b>Average Case (\(O(n \log n)\)):</b> Assuming random splits, the expected depth of the recursion tree remains \(O(\log n)\). Writing the average case recurrence:
+                        \[T(n) = \frac{2}{n} \sum_{i=0}^{n-1} T(i) + cn \implies T(n) = O(n \log n)\]
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-9">
+            <h4 class="qa-question">9. (a) Find the minimum number of scalar operation needed to multiply the matrices A1, A2, A3 and A4 having dimensions 30x35, 35x15, 15x5 and 5x10 respectively.</h4>
+            <div class="answer">
+                <p>Dimensions array: \(P = [30, 35, 15, 5, 10]\). Recurrence: \(m[i, j] = \min \{m[i, k] + m[k+1, j] + P[i-1] \cdot P[k] \cdot P[j]\}\).</p>
+                <p><b>DP Tracing:</b></p>
+                <ul>
+                    <li>Base cases: \(m[1,1]=m[2,2]=m[3,3]=m[4,4]=0\)</li>
+                    <li>Chain Length 2:
+                        <ul>
+                            <li>\(m[1, 2] = 30 \times 35 \times 15 = 15,750\)</li>
+                            <li>\(m[2, 3] = 35 \times 15 \times 5 = 2,625\)</li>
+                            <li>\(m[3, 4] = 15 \times 5 \times 10 = 750\)</li>
+                        </ul>
+                    </li>
+                    <li>Chain Length 3:
+                        <ul>
+                            <li>\(m[1, 3] = \min(m[1,1]+m[2,3]+30\cdot35\cdot5, m[1,2]+m[3,3]+30\cdot15\cdot5) = \min(0+2625+5250, 15750+0+2250) = 7,875\) at split \(k=1\).</li>
+                            <li>\(m[2, 4] = \min(m[2,2]+m[3,4]+35\cdot15\cdot10, m[2,3]+m[4,4]+35\cdot5\cdot10) = \min(0+750+5250, 2625+0+1750) = 4,375\) at split \(k=3\).</li>
+                        </ul>
+                    </li>
+                    <li>Chain Length 4 (\(m[1, 4]\)):
+                        <ul>
+                            <li>Split \(k=1\): \(m[1,1] + m[2,4] + 30\cdot35\cdot10 = 0 + 4375 + 10500 = 14,875\)</li>
+                            <li>Split \(k=2\): \(m[1,2] + m[3,4] + 30\cdot15\cdot10 = 15750 + 750 + 4500 = 21,000\)</li>
+                            <li>Split \(k=3\): \(m[1,3] + m[4,4] + 30\cdot5\cdot10 = 7875 + 0 + 1500 = 9,375\)</li>
+                        </ul>
+                        Minimum cost is <b>9,375</b>.
+                    </li>
+                </ul>
+                <div class="formula-box">
+                    Minimum Scalar Multiplications: <b>9,375</b><br>
+                    Optimal Parenthesization: <b>\((A_1 \times (A_2 \times A_3)) \times A_4\)</b>
+                </div>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Write down an algorithm using Greedy method to find minimum spanning tree by Kruskal's algorithm. (c) Find the time complexity.</b></p>
+                <pre><code>Kruskal-MST(G, w):
+    1. Initialize set A = Empty
+    2. For each vertex v in G.V:
+          Make-Set(v)
+    3. Sort the edges of G.E in non-decreasing order of weights w.
+    4. For each edge (u, v) in G.E (sorted):
+          If Find-Set(u) != Find-Set(v):
+             Add (u, v) to A
+             Union(u, v)
+    5. Return A</code></pre>
+                <p><b>Time Complexity:</b> Sorting edges takes \(O(E \log E)\). Disjoint-set operations take \(O(E \cdot \alpha(V))\). Total complexity is <b>\(O(E \log E)\)</b> or <b>\(O(E \log V)\)</b>.</p>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(d) Differentiate between Backtracking and Branch and Bound.</b></p>
+                <p>Backtracking uses DFS search; branch and bound uses BFS/Best-First search. Backtracking is typically used for constraint-satisfaction/decision problems; branch and bound is used for optimization problems. Backtracking has lower memory requirements (\(O(V)\)); branch and bound has very high memory overhead.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-10">
+            <h4 class="qa-question">10. (a) Find the transitive closure of vertex A from the following graph.</h4>
+            <div class="answer">
+                <p>Given directed edges: \(A \to B, A \to C, B \to E, C \to D, D \to H, H \to G, G \to E, E \to F, F \to A, F \to G\).</p>
+                <p>We trace all vertices reachable from A using Depth-First Search (DFS) starting at node A:</p>
+                <ol>
+                    <li>Start at <b>A</b>.</li>
+                    <li>Traverse \(A \to B\). Reach <b>B</b>.</li>
+                    <li>Traverse \(B \to E\). Reach <b>E</b>.</li>
+                    <li>Traverse \(E \to F\). Reach <b>F</b>.</li>
+                    <li>Traverse \(F \to G\). Reach <b>G</b>.</li>
+                    <li>From G, can go to E (visited). From F, can go to A (visited).</li>
+                    <li>Backtrack to A. Traverse \(A \to C\). Reach <b>C</b>.</li>
+                    <li>Traverse \(C \to D\). Reach <b>D</b>.</li>
+                    <li>Traverse \(D \to H\). Reach <b>H</b>.</li>
+                    <li>Traverse \(H \to G\). G is already reached.</li>
+                </ol>
+                <p>All vertices \(\{A, B, C, D, E, F, G, H\}\) are successfully reached.</p>
+                <div class="formula-box">Transitive Closure of Vertex A: <b>{A, B, C, D, E, F, G, H}</b></div>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Define graph terms.</b></p>
+                <ul>
+                    <li><b>Directed graph:</b> A graph where edges have a defined direction (ordered pairs of vertices).</li>
+                    <li><b>Undirected graph:</b> A graph where edges connect vertices symmetrically (unordered pairs).</li>
+                    <li><b>In-Degree:</b> Number of edges directed into a vertex. <b>Out-Degree:</b> Number of edges directed out of a vertex.</li>
+                    <li><b>Complete Graph:</b> A graph where every pair of vertices is connected by a unique edge.</li>
+                    <li><b>Articulation Point:</b> A vertex whose removal increases the number of connected components in the graph.</li>
+                    <li><b>Bridge:</b> An edge whose removal increases the number of connected components in the graph.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q23-11">
+            <h4 class="qa-question">11. (a) Differentiate between recursion and iteration. (b) Solve recurrence relations. (c) Define little omega notation.</h4>
+            <div class="answer">
+                <p><b>(a) Recursion vs Iteration:</b> Recursion solves problems by calling the same function on smaller inputs (uses function stack frame overhead). Iteration uses loops (for/while) to run code repeatedly (constant stack space, generally faster).</p>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Recurrence Solvers:</b></p>
+                <p><b>(i) \(T(n) = 2T(n/4) + n^{0.51}\)</b>
+                    <br>\(a=2, b=4 \implies n^{\log_4 2} = n^{0.5}\).
+                    <br>Since \(f(n) = n^{0.51} = \Omega(n^{0.5 + 0.01})\), and the regularity condition holds (\(2(n/4)^{0.51} \approx 0.986 n^{0.51} \le c n^{0.51}\) with \(c=0.986 < 1\)), this matches Case 3 of Master's Theorem.
+                    <br><b>Complexity: \(T(n) = \Theta(n^{0.51})\)</b>.
+                </p>
+                <p><b>(ii) \(T(n) = \sqrt{2} T(n/2) + \log n\)</b>
+                    <br>\(a=\sqrt{2}, b=2 \implies n^{\log_2 \sqrt{2}} = n^{0.5}\).
+                    <br>Since \(f(n) = \log n = O(n^{0.5 - 0.1})\) (grows strictly slower than \(n^{0.5}\)), this matches Case 1 of Master's Theorem.
+                    <br><b>Complexity: \(T(n) = \Theta(n^{0.5}) = \Theta(\sqrt{n})\)</b>.
+                </p>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) Little Omega (\(\omega\)) Notation:</b></p>
+                <p>Indicates a loose lower bound. Formally, \(f(n) = \omega(g(n))\) if for any positive constant \(c > 0\), there exists \(n_0\) such that \(f(n) > c \cdot g(n) \ge 0\) for all \(n \ge n_0\). This implies \(\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty\).</p>
+                <p><i>Example:</i> \(f(n) = n^2 = \omega(n)\) since \(\lim_{n \to \infty} \frac{n^2}{n} = \lim_{n \to \infty} n = \infty\).</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

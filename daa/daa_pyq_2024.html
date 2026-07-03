@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023-24 DAA Solved Paper</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="notes.css">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary-color: #f97316; /* Orange Accent for 2024 Paper */
+            --primary-light: rgba(249, 115, 22, 0.05);
+            --border-color: rgba(249, 115, 22, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="daa_index.html">← DAA Menu</a>
+    <span class="nav-title">2023-24 Solved Paper</span>
+    <div style="display:flex;gap:0.5rem;">
+        <span style="opacity: 0.3; cursor: not-allowed; padding: 0.4rem 0.9rem; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">← Prev</span>
+        <a href="daa_pyq_2023.html">Next →</a>
+    </div>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Design &amp; Analysis of Algorithms</h1>
+        <p class="subtitle">2023-24 Solved Paper · Detailed Solutions</p>
+        <div class="book-divider">
+            <span class="line"></span>
+            <span class="ornament">❖</span>
+            <span class="line"></span>
+        </div>
+    </header>
+    
+    <div class="section">
+        <h2 id="group-a" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Group A — Very Short Answer Type Questions</h2>
+        
+        <div class="qa-card" id="mcq-24-1">
+            <h4 class="qa-question">1. (i) What is the appropriate data structure for Prim's Minimum Spanning Tree algorithm?</h4>
+            <div class="answer">
+                <p>Answer: <b>Min-Priority Queue</b> (typically implemented using a <b>Binary Heap</b> or a <b>Fibonacci Heap</b> for optimal performance). It is used to quickly extract the vertex with the minimum key value among the unvisited vertices.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-2">
+            <h4 class="qa-question">1. (ii) What is represented by the asymptotic notation O(1)?</h4>
+            <div class="answer">
+                <p>Answer: <b>Constant Time Complexity</b>. It indicates that the execution time of the algorithm remains constant and does not grow or change with the size of the input data \(n\).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-3">
+            <h4 class="qa-question">1. (iii) Time complexity for recurrence relation T(n) = 2T(n/2) + n is:</h4>
+            <div class="answer">
+                <p>Answer: <b>\(O(n \log n)\)</b>. This matches Case 2 of Master's Theorem where \(a=2, b=2, k=0 \implies n^{\log_2 2} = n\), resulting in \(T(n) = \Theta(n \log n)\).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-4">
+            <h4 class="qa-question">1. (iv) The notation \(\Omega(n)\) is the formal way to express the ______ bound of an algorithm's running time.</h4>
+            <div class="answer">
+                <p>Answer: <b>asymptotic lower</b> (representing the best-case growth rate).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-5">
+            <h4 class="qa-question">1. (v) Fractional knapsack problem is solved most efficiently by which algorithm design technique?</h4>
+            <div class="answer">
+                <p>Answer: <b>Greedy method</b> (sorting by value-to-weight ratio and picking items greedily).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-6">
+            <h4 class="qa-question">1. (vi) What is the appropriate data structure for Depth First Search algorithm?</h4>
+            <div class="answer">
+                <p>Answer: <b>Stack</b> (either using the system call stack via recursion, or an explicit LIFO Stack data structure).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-7">
+            <h4 class="qa-question">1. (vii) Which algorithm is used to solve a maximum flow problem?</h4>
+            <div class="answer">
+                <p>Answer: <b>Ford-Fulkerson Algorithm</b> (or its polynomial implementation, the <b>Edmonds-Karp Algorithm</b> using BFS).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-8">
+            <h4 class="qa-question">1. (viii) How many solutions are there for 8 queens problem on 8*8 board?</h4>
+            <div class="answer">
+                <p>Answer: <b>92</b> total solutions (which reduce to 12 unique solutions under rotational and reflective symmetry).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-9">
+            <h4 class="qa-question">1. (ix) Time complexity of Heap sort with n items is:</h4>
+            <div class="answer">
+                <p>Answer: <b>\(O(n \log n)\)</b> in all cases (best, worst, and average cases).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-10">
+            <h4 class="qa-question">1. (x) The 0-1 Knapsack problem can be solved using Greedy algorithm - state True or False.</h4>
+            <div class="answer">
+                <p>Answer: <b>False</b>. Greedy algorithms do not guarantee an optimal solution for 0-1 Knapsack because items cannot be divided; Dynamic Programming or Branch and Bound must be used.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-11">
+            <h4 class="qa-question">1. (xi) Which algorithm is used to solve the single source shortest path problem in a graph with negative edge weights?</h4>
+            <div class="answer">
+                <p>Answer: <b>Bellman-Ford Algorithm</b> (can handle negative edge weights and detect negative cycles).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="mcq-24-12">
+            <h4 class="qa-question">1. (xii) Given items as {value, weight} pairs {{40, 20}, {30, 10}, {20, 5}}. The capacity of knapsack is 20. Find the maximum value output assuming items to be divisible.</h4>
+            <div class="answer">
+                <p>Answer: <b>60</b>.</p>
+                <p><b>Calculation:</b>
+                    <br>1. Calculate value/weight ratios:
+                    <ul>
+                        <li>Item 1: \(40/20 = 2\)</li>
+                        <li>Item 2: \(30/10 = 3\)</li>
+                        <li>Item 3: \(20/5 = 4\)</li>
+                    </ul>
+                    2. Sort items by ratio: Item 3 \(\to\) Item 2 \(\to\) Item 1.
+                    <br>3. Load knapsack (Capacity = 20):
+                    <ul>
+                        <li>Take all of Item 3 (Weight = 5, Value = 20). Remaining capacity = 15.</li>
+                        <li>Take all of Item 2 (Weight = 10, Value = 30). Remaining capacity = 5.</li>
+                        <li>Take fraction of Item 1: \(\frac{5}{20} = 0.25\) of Item 1 (Weight = 5, Value = \(40 \times 0.25 = 10\)). Remaining capacity = 0.</li>
+                    </ul>
+                    Total Value = \(20 + 30 + 10 = 60\).
+                </p>
+            </div>
+        </div>
+
+        <h2 id="group-b" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Group B — Short Answer Type Questions</h2>
+        
+        <div class="qa-card" id="q24-2">
+            <h4 class="qa-question">2. What are the differences between Dijkstra's algorithm and Bellman-Ford algorithm? Compare their time complexities.</h4>
+            <div class="answer">
+                <p><b>Dijkstra's Algorithm</b> and <b>Bellman-Ford Algorithm</b> both solve the Single Source Shortest Path (SSSP) problem, but they target different constraints and use different strategies.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Dijkstra's Algorithm</th>
+                            <th>Bellman-Ford Algorithm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Paradigm</b></td>
+                            <td>Greedy Approach (selects the nearest vertex next).</td>
+                            <td>Dynamic Programming (relaxes all edges iteratively).</td>
+                        </tr>
+                        <tr>
+                            <td><b>Negative Edges</b></td>
+                            <td>Cannot handle negative edge weights.</td>
+                            <td>Can handle negative edge weights.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Cycle Detection</b></td>
+                            <td>Cannot detect negative cycles (will fail/loop).</td>
+                            <td>Can detect the presence of negative cycles.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Edge Relaxation</b></td>
+                            <td>Relaxes edges from a single visited vertex at a time.</td>
+                            <td>Relaxes all edges in the graph in every iteration.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Time Complexity</b></td>
+                            <td>\(O(E \log V)\) using a Binary Heap.</td>
+                            <td>\(O(V \cdot E)\) (slower than Dijkstra).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-3">
+            <h4 class="qa-question">3. Analyze the time complexity of quick sort algorithm for best case and worst case using recurrence relations.</h4>
+            <div class="answer">
+                <p>Quick Sort's performance is partition-dependent:</p>
+                <p><b>1. Best Case (Perfect Splits):</b></p>
+                <p>Occurs when the pivot splits the array into two equal halves of size \(n/2\) at each recursion level. Recurrence:</p>
+                <p>\[T(n) = 2T(n/2) + cn\]</p>
+                <p>Applying Case 2 of Master's Theorem (\(a=2, b=2, f(n)=cn \implies n^{\log_2 2} = n\)):</p>
+                <div class="formula-box">\(T(n) = \Theta(n \log n)\)</div>
+
+                <p><b>2. Worst Case (Skewed Splits):</b></p>
+                <p>Occurs when the pivot is consistently the smallest or largest element, leaving partitions of size \(0\) and \(n-1\). Recurrence:</p>
+                <p>\[T(n) = T(n-1) + T(0) + cn = T(n-1) + cn\]</p>
+                <p>Expanding the recurrence:</p>
+                <ul>
+                    <li>\(T(n) = T(n-1) + cn\)</li>
+                    <li>\(T(n) = T(n-2) + c(n-1) + cn\)</li>
+                    <li>\(T(n) = T(1) + c \sum_{i=2}^{n} i = T(1) + c \left[\frac{n(n+1)}{2} - 1\right]\)</li>
+                </ul>
+                <div class="formula-box">\(T(n) = O(n^2)\)</div>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-4">
+            <h4 class="qa-question">4. Write the Floyd-Warshal Algorithm for all-pairs shortest path problem. What will be the time complexity?</h4>
+            <div class="answer">
+                <p><b>Floyd-Warshall Algorithm:</b> A dynamic programming approach to find the shortest path between all pairs of vertices. It systematically computes intermediate paths using vertices \(\{1..k\}\).</p>
+                <pre><code>Floyd-Warshall(W, V):
+    1. Let D^(0) = W (Initial weight matrix where D[i][j] = weight(i,j))
+    2. For k = 1 to V:
+          For i = 1 to V:
+             For j = 1 to V:
+                D^(k)[i][j] = min( D^(k-1)[i][j], D^(k-1)[i][k] + D^(k-1)[k][j] )
+    3. Return D^(V)</code></pre>
+                <p><b>Time Complexity:</b> The three nested loops each run exactly \(V\) times, executing a constant-time comparison in each iteration. Thus, the total time complexity is <b>\(\Theta(V^3)\)</b>.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-5">
+            <h4 class="qa-question">5. For the given set of 5 items and the knapsack capacity of 10 kg, find the maximum profit. (Fractional knapsack, Wi={3,3,2,5,1}, Pi={10,15,10,12,8}).</h4>
+            <div class="answer">
+                <p>Given capacity \(M = 10\) kg. We calculate the profit-to-weight ratios:</p>
+                <ol>
+                    <li>Item 1: \(P_1 = 10, W_1 = 3 \implies ratio = 3.33\)</li>
+                    <li>Item 2: \(P_2 = 15, W_2 = 3 \implies ratio = 5.00\)</li>
+                    <li>Item 3: \(P_3 = 10, W_3 = 2 \implies ratio = 5.00\)</li>
+                    <li>Item 4: \(P_4 = 12, W_4 = 5 \implies ratio = 2.40\)</li>
+                    <li>Item 5: \(P_5 = 8,  W_5 = 1 \implies ratio = 8.00\)</li>
+                </ol>
+                <p>Sorting in descending order of ratio: Item 5 (8.0) \(\to\) Item 2 (5.0) \(\to\) Item 3 (5.0) \(\to\) Item 1 (3.33) \(\to\) Item 4 (2.40).</p>
+                <p><b>Greedy Selection:</b></p>
+                <ul>
+                    <li>Take all of <b>Item 5</b> (Weight = 1 kg, Profit = 8). Remaining capacity = 9 kg.</li>
+                    <li>Take all of <b>Item 2</b> (Weight = 3 kg, Profit = 15). Remaining capacity = 6 kg.</li>
+                    <li>Take all of <b>Item 3</b> (Weight = 2 kg, Profit = 10). Remaining capacity = 4 kg.</li>
+                    <li>Take all of <b>Item 1</b> (Weight = 3 kg, Profit = 10). Remaining capacity = 1 kg.</li>
+                    <li>Take fraction of <b>Item 4</b>: \(\frac{1}{5} = 0.2\) of Item 4 (Weight = 1 kg, Profit = \(12 \times 0.2 = 2.4\)). Remaining capacity = 0 kg.</li>
+                </ul>
+                <div class="formula-box">Maximum Profit: 8 + 15 + 10 + 10 + 2.4 = <b>45.4</b></div>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-6">
+            <h4 class="qa-question">6. Write short note on Randomized algorithms.</h4>
+            <div class="answer">
+                <p>A <b>Randomized Algorithm</b> is an algorithm that uses random numbers to influence its decision-making logic. Instead of executing deterministically based on the input, it leverages a random source to obtain average-case behavior on worst-case inputs.</p>
+                <p>Randomized algorithms are broadly classified into two main types:</p>
+                <ol>
+                    <li><b>Las Vegas Algorithms:</b> These algorithms <b>always produce the correct result</b>, but their execution time is a random variable. The goal is to minimize the expected running time.
+                        <br><i>Example:</i> <b>Randomized Quick Sort</b> (choosing a random pivot avoids worst-case \(O(n^2)\) splits, guaranteeing expected \(O(n \log n)\) time).
+                    </li>
+                    <li><b>Monte Carlo Algorithms:</b> These algorithms have a <b>deterministic execution time</b>, but their outputs have a small, bounded probability of being incorrect. The accuracy probability can be improved by running the algorithm multiple times.
+                        <br><i>Example:</i> <b>Miller-Rabin Primality Test</b> (checks if a number is prime in polynomial time with a tiny error probability), or <b>Karger's Min-Cut Algorithm</b>.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <h2 id="group-c" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Group C — Long Answer Type Questions</h2>
+        
+        <div class="qa-card" id="q24-7">
+            <h4 class="qa-question">7. (a) Find the minimum number of multiplications required for Matrix Chain Multiplication: A(10×20), B(20×50), C(50×1), D(1×100).</h4>
+            <div class="answer">
+                <p>Given matrices \(A(10 \times 20)\), \(B(20 \times 50)\), \(C(50 \times 1)\), and \(D(1 \times 100)\). The dimensions array is \(P = [10, 20, 50, 1, 100]\) for \(n = 4\) matrices. Recurrence: \(m[i, j] = \min \{m[i, k] + m[k+1, j] + P[i-1] \cdot P[k] \cdot P[j]\}\).</p>
+                <p><b>DP Calculation Table:</b></p>
+                <ol>
+                    <li><b>Chain Length 1:</b>
+                        <br>\(m[1, 1] = m[2, 2] = m[3, 3] = m[4, 4] = 0\)
+                    </li>
+                    <li><b>Chain Length 2:</b>
+                        <ul>
+                            <li>\(m[1, 2] = 10 \times 20 \times 50 = 10,000\) (Split at \(k=1\))</li>
+                            <li>\(m[2, 3] = 20 \times 50 \times 1 = 1,000\) (Split at \(k=2\))</li>
+                            <li>\(m[3, 4] = 50 \times 1 \times 100 = 5,000\) (Split at \(k=3\))</li>
+                        </ul>
+                    </li>
+                    <li><b>Chain Length 3:</b>
+                        <ul>
+                            <li><b>\(m[1, 3]\) (Multiplying \(A B C\)):</b> Possible splits:
+                                <ul>
+                                    <li>\(k = 1\): \(m[1, 1] + m[2, 3] + P[0] \cdot P[1] \cdot P[3] = 0 + 1000 + 10 \times 20 \times 1 = 1200\)</li>
+                                    <li>\(k = 2\): \(m[1, 2] + m[3, 3] + P[0] \cdot P[2] \cdot P[3] = 10000 + 0 + 10 \times 50 \times 1 = 10500\)</li>
+                                </ul>
+                                Minimum is <b>1,200</b> at split \(k=1\).
+                            </li>
+                            <li><b>\(m[2, 4]\) (Multiplying \(B C D\)):</b> Possible splits:
+                                <ul>
+                                    <li>\(k = 2\): \(m[2, 2] + m[3, 4] + P[1] \cdot P[2] \cdot P[4] = 0 + 5000 + 20 \times 50 \times 100 = 105,000\)</li>
+                                    <li>\(k = 3\): \(m[2, 3] + m[4, 4] + P[1] \cdot P[3] \cdot P[4] = 1000 + 0 + 20 \times 1 \times 100 = 3,000\)</li>
+                                </ul>
+                                Minimum is <b>3,000</b> at split \(k=3\).
+                            </li>
+                        </ul>
+                    </li>
+                    <li><b>Chain Length 4 (\(m[1, 4]\) - Multiplying \(A B C D\)):</b> Possible splits:
+                        <ul>
+                            <li>\(k = 1\): \(m[1, 1] + m[2, 4] + P[0] \cdot P[1] \cdot P[4] = 0 + 3000 + 10 \times 20 \times 100 = 23,000\)</li>
+                            <li>\(k = 2\): \(m[1, 2] + m[3, 4] + P[0] \cdot P[2] \cdot P[4] = 10000 + 5000 + 10 \times 50 \times 100 = 65,000\)</li>
+                            <li>\(k = 3\): \(m[1, 3] + m[4, 4] + P[0] \cdot P[3] \cdot P[4] = 1200 + 0 + 10 \times 1 \times 100 = 2,200\)</li>
+                        </ul>
+                        Minimum is <b>2,200</b> at split \(k=3\).
+                    </li>
+                </ol>
+                <div class="formula-box">
+                    Minimum Scalar Multiplications: <b>2,200</b><br>
+                    Optimal Parenthesization: <b>\(((A \times B) \times C) \times D\)</b>
+                </div>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Write the algorithm for single source shortest path (-ve edge weights allowed) [Bellman-Ford].</b></p>
+                <pre><code>Bellman-Ford(Graph G, Source S):
+    1. Initialize distances: dist[v] = Infinity for all v, dist[S] = 0
+    2. Relax all edges |V| - 1 times:
+       For i = 1 to |V| - 1:
+          For each edge (u, v) in G with weight w:
+             If dist[u] != Infinity and dist[u] + w < dist[v]:
+                dist[v] = dist[u] + w
+    3. Detect negative cycles:
+       For each edge (u, v) in G with weight w:
+          If dist[u] != Infinity and dist[u] + w < dist[v]:
+             Error "Negative weight cycle detected!"
+    4. Return dist</code></pre>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) Discuss the advantages and drawbacks of Dynamic Programming.</b></p>
+                <p><b>Advantages:</b> Guarantees global optimality; avoids redundant computations by storing intermediate subproblem states; simple recursive logic formalized into clean tables.</p>
+                <p><b>Drawbacks:</b> High space complexity to maintain DP tables; designing transition relations and states is mathematically complex; strict requirements of optimal substructure and overlapping subproblems.</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-8">
+            <h4 class="qa-question">8. (a) What are the features of any Algorithm?</h4>
+            <div class="answer">
+                <p>An algorithm must satisfy Donald Knuth's five primary properties:</p>
+                <ol>
+                    <li><b>Input:</b> Accepts zero or more values externally.</li>
+                    <li><b>Output:</b> Produces at least one output matching the goal.</li>
+                    <li><b>Definiteness:</b> Each instruction must be clear and unambiguous.</li>
+                    <li><b>Finiteness:</b> Must terminate after a finite number of steps.</li>
+                    <li><b>Effectiveness:</b> Every step must be basic enough to be executed manually with paper/pencil in finite time.</li>
+                </ol>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Discuss the different Asymptotic notations and their importance.</b></p>
+                <ul>
+                    <li><b>Big-O (\(O\)):</b> Upper bound of complexity. Guarantees that the algorithm runs no slower than this.</li>
+                    <li><b>Big-Omega (\(\Omega\)):</b> Lower bound of complexity. Guarantees the algorithm takes at least this long.</li>
+                    <li><b>Big-Theta (\(\Theta\)):</b> Tight bound. Used when upper and lower bounds grow at the same rate.</li>
+                    <li><b>Little-o (\(o\)):</b> Loose upper bound (strictly less than, e.g. \(f(n) = o(g(n))\) means \(f(n)\) grows much slower than \(g(n)\)).</li>
+                    <li><b>Little-omega (\(\omega\)):</b> Loose lower bound (strictly greater than).</li>
+                </ul>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) Write the recurrence relation for computing the time complexity of "Towers of Hanoi" problem. Also solve the recurrence relation to get the time complexity.</b></p>
+                <p><b>Recurrence Relation:</b> Moving \(n\) disks from source peg to destination peg requires moving \(n-1\) disks to an auxiliary peg, moving the largest disk to the destination, and then moving the \(n-1\) disks from auxiliary to destination.</p>
+                <div class="formula-box">\(T(n) = 2T(n-1) + 1, \quad T(1) = 1\)</div>
+                <p><b>Solving by Expansion:</b></p>
+                <ul>
+                    <li>\(T(n) = 2T(n-1) + 1\)</li>
+                    <li>\(T(n) = 2[2T(n-2) + 1] + 1 = 2^2 T(n-2) + 2 + 1\)</li>
+                    <li>\(T(n) = 2^3 T(n-3) + 2^2 + 2^1 + 2^0\)</li>
+                    <li>For \(k\) steps: \(T(n) = 2^k T(n-k) + (2^{k-1} + 2^{k-2} + \dots + 2^0)\)</li>
+                    <li>Since base case is at \(n-k = 1 \implies k = n-1\):
+                        \[T(n) = 2^{n-1} T(1) + \sum_{i=0}^{n-2} 2^i = 2^{n-1} + (2^{n-1} - 1) = 2^n - 1\]
+                    </li>
+                </ul>
+                <div class="formula-box">Time Complexity: \(\Theta(2^n)\)</div>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-9">
+            <h4 class="qa-question">9. (a) Write the greedy algorithm for job sequencing with deadline.</h4>
+            <div class="answer">
+                <pre><code>JobSequencing(Jobs, n):
+    1. Sort all jobs in descending order of their profit values.
+    2. Find the maximum deadline value among all jobs. Let it be Max_D.
+    3. Create a result array slot[1..Max_D] and initialize all slots to Free.
+    4. For i = 1 to n:
+          For j = min(Max_D, Jobs[i].deadline) down to 1:
+             If slot[j] is Free:
+                slot[j] = Jobs[i] // Assign job to slot j
+                Break // Move to next job
+    5. Return slot</code></pre>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) Find optimal solution to job sequencing where n=4, profits (100,10,5,27) and deadlines (2,1,2,1).</b></p>
+                <p>Jobs: \(J_1(p=100, d=2)\), \(J_2(p=10, d=1)\), \(J_3(p=5, d=2)\), \(J_4(p=27, d=1)\).</p>
+                <ol>
+                    <li>Sort by profits: \(J_1(100) \to J_4(27) \to J_2(10) \to J_3(5)\).</li>
+                    <li>Max deadline = 2. Create slots: Slot 1 (0-1) and Slot 2 (1-2).</li>
+                    <li>Process \(J_1\): deadline = 2. Assign to Slot 2 (1-2).</li>
+                    <li>Process \(J_4\): deadline = 1. Assign to Slot 1 (0-1).</li>
+                    <li>Process \(J_2\): deadline = 1. Slot 1 is full. Slot 2 is full. Reject.</li>
+                    <li>Process \(J_3\): deadline = 2. Both slots full. Reject.</li>
+                </ol>
+                <div class="formula-box">
+                    Optimal Job Schedule: <b>{J4, J1}</b><br>
+                    Total Profit: 27 + 100 = <b>127</b>
+                </div>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) Define spanning tree.</b></p>
+                <p>A spanning tree is an acyclic, connected subgraph of a connected, undirected graph \(G=(V, E)\) that connects all the virtues \(V\) of the graph using exactly \(|V| - 1\) edges.</p>
+
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(d) Using Prim's algorithm generate the MST from the following graph:</b></p>
+                <p>Tracing Prim's algorithm starting from vertex 1:</p>
+                <ul>
+                    <li>Start at vertex 1. Visited = {1}. Edges available: (1,2)[2], (1,3)[4], (1,4)[1].</li>
+                    <li>Select minimum edge: <b>(1, 4) with weight 1</b>. Add vertex 4. Visited = {1, 4}.</li>
+                    <li>Edges available: (1,2)[2], (1,3)[4], (4,2)[3], (4,3)[2], (4,5)[7], (4,6)[8], (4,7)[4].</li>
+                    <li>Select minimum edge: <b>(1, 2) with weight 2</b> (or (4, 3)[2]). Add vertex 2. Visited = {1, 4, 2}.</li>
+                    <li>Select minimum edge: <b>(4, 3) with weight 2</b>. Add vertex 3. Visited = {1, 4, 2, 3}.</li>
+                    <li>Edges available: (3,6)[5], (4,7)[4], (4,5)[7], (2,5)[10].</li>
+                    <li>Select minimum edge: <b>(4, 7) with weight 4</b>. Add vertex 7. Visited = {1, 4, 2, 3, 7}.</li>
+                    <li>Edges available: (7,6)[1], (7,5)[6].</li>
+                    <li>Select minimum edge: <b>(7, 6) with weight 1</b>. Add vertex 6. Visited = {1, 4, 2, 3, 7, 6}.</li>
+                    <li>Select minimum edge: <b>(7, 5) with weight 6</b>. Add vertex 5. Visited = {1, 4, 2, 3, 7, 6, 5}.</li>
+                </ul>
+                <div class="formula-box">
+                    MST Edges Selected: <b>(1,4)[1], (1,2)[2], (4,3)[2], (4,7)[4], (7,6)[1], (7,5)[6]</b><br>
+                    Total MST Weight: 1 + 2 + 2 + 4 + 1 + 6 = <b>16</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-10">
+            <h4 class="qa-question">10. (a) Write and explain the classes P, NP, NP-hard and NP-complete.</h4>
+            <div class="answer">
+                <ul>
+                    <li><b>P:</b> Decision problems solvable in polynomial time by a deterministic Turing machine.</li>
+                    <li><b>NP:</b> Decision problems verifiable in polynomial time by a deterministic Turing machine (or solvable in polynomial time by a non-deterministic Turing machine).</li>
+                    <li><b>NP-Hard:</b> Problems that are at least as hard as the hardest problems in NP. They do not have to be decision problems, nor do they have to be in NP.</li>
+                    <li><b>NP-Complete (NPC):</b> Problems that are both in NP and are NP-Hard. They represent the absolute hardest problems in NP.</li>
+                </ul>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) What is reducibility?</b></p>
+                <p>Reducibility is a method of converting problem \(A\) into problem \(B\). If \(A \le_p B\) (polynomial-time reducible), then any algorithm that solves \(B\) in polynomial time can be used to solve \(A\) in polynomial time by transforming the input first, showing that \(B\) is at least as hard as \(A\).</p>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) "If any NP-complete problem can be solved in polynomial time then P=NP" explain.</b></p>
+                <p>By definition, every problem \(X \in NP\) can be reduced to an NP-Complete problem \(L\) in polynomial time. If \(L\) is solvable in polynomial time, then any problem \(X \in NP\) can be solved by first reducing it to \(L\) (poly-time) and then solving \(L\) (poly-time). Since both steps take polynomial time, \(X\) is solved in polynomial time, proving \(NP \subseteq P \implies P = NP\).</p>
+            </div>
+        </div>
+
+        <div class="qa-card" id="q24-11">
+            <h4 class="qa-question">11. (a) What is a Flow Network? What are the constraints of flow in a network?</h4>
+            <div class="answer">
+                <p>A <b>Flow Network</b> is a directed graph \(G=(V, E)\) where each edge \((u, v)\) has a non-negative capacity \(c(u, v) \ge 0\), with a designated source node \(S\) and a sink node \(T\).</p>
+                <p><b>Constraints:</b></p>
+                <ol>
+                    <li><b>Capacity Constraint:</b> The flow along any edge cannot exceed its capacity:
+                        \[0 \le f(u, v) \le c(u, v)\]
+                    </li>
+                    <li><b>Flow Conservation:</b> The total flow entering any intermediate vertex must equal the total flow leaving it:
+                        \[\sum_{u \in V} f(u, v) = \sum_{w \in V} f(v, w) \quad \text{for all } v \in V - \{S, T\}\]
+                    </li>
+                    <li><b>Skew Symmetry:</b> Flow in one direction is the negative of flow in the reverse direction:
+                        \[f(u, v) = -f(v, u)\]
+                    </li>
+                </ol>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(b) What is an augmenting path in a flow network? Explain residual capacity - how it is calculated.</b></p>
+                <p>An **augmenting path** is a simple path from source \(S\) to sink \(T\) in the **residual graph** \(G_f\) where each edge along the path has positive residual capacity.</p>
+                <p>The **residual capacity** \(c_f(u, v)\) is the remaining capacity on an edge that can support additional flow. It is calculated as:</p>
+                <div class="formula-box">
+                    For forward edges: \(c_f(u, v) = c(u, v) - f(u, v)\)<br>
+                    For reverse edges: \(c_f(v, u) = f(u, v)\)
+                </div>
+                
+                <hr style="border-top:1px solid var(--border-color);margin:1.5rem 0;">
+                
+                <p><b>(c) Write the Ford-Fulkerson Algorithm for finding maximum flow.</b></p>
+                <pre><code>Ford-Fulkerson(G, S, T):
+    1. Initialize flow f(u, v) = 0 for all edges.
+    2. While there exists an augmenting path P in the residual graph G_f:
+          a. Find the bottleneck capacity c_f(P) = min { c_f(u, v) : (u, v) in P }
+          b. For each edge (u, v) in P:
+                If (u, v) is a forward edge:
+                   f(u, v) = f(u, v) + c_f(P)
+                Else:
+                   f(v, u) = f(v, u) - c_f(P)
+    3. Return max flow value</code></pre>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
